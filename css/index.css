@@ -1,3 +1,351 @@
 /* Use your own code or past solution for Great Idea Web Page CSS here! */
 
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
 
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+/* ol, ul {
+	list-style: none;
+} */
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Set every element's box-sizing to border-box */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Bangers', cursive;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+/* Copy and paste your work from yesterday here and start to refactor into flexbox */
+
+body {
+	max-width: 900px;
+	margin: auto;
+}
+
+.topbar {
+	width: 100%;
+	display: flex;
+}
+
+.navigation {
+	/*border: 1px dashed black;*/
+	width: 100%;
+	height: 50px;
+	margin: 1%;
+	box-sizing: 100%;
+	justify-content: space-between;
+}
+.navigation a {
+	text-decoration: none;
+	color: gray;
+	width: 12%;
+	line-height: 50px;
+	flex-flow: row;
+	justify-content: space-around;
+	padding: 25px;
+}
+.navigation a:hover {
+	text-decoration: underline;
+}
+
+.logo {
+    float: right;
+    margin: 1%;
+}
+
+.bothsections {
+	/* border: 2px solid pink; */
+	display: flex;
+	justify-content: space-between;
+	margin: 5% 0 5% 0;
+	text-align: center;
+	padding: 0 1% 0 1%;
+} 
+
+.box {
+	margin: 10% 10% 0 10%;
+}
+
+.heading {
+	/*border: 1px dashed black;*/
+	width: 100%;
+	/* border: 2px solid red; */
+
+}
+
+.title {
+	width: 100%;
+	/* margin: 10% 10% 0 10%; */
+	text-align: center;
+
+}
+
+.title p {
+	font-size: 75px;
+	font-family: 'Bangers', cursive;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+
+}
+
+button {
+    background: #FFFFFF;
+    border: 1px solid gray;
+    height: 30px;
+    width: 125px;
+    margin: 2.5% 0 1.25% 0;
+}
+
+button:hover {
+	color: black;
+}
+
+.heading img {	
+    margin: 1%;
+	display: inline;
+	border: 2px solid black;
+	position: absolute;
+	top: 25%;
+	right: 12%;
+	
+}
+
+.pagebreak-top {
+	border: 1px solid black;
+	width: auto;
+}
+
+.initial-content {
+	/*border: 1px dashed black;*/
+	width: 100%;
+	padding: 5% 1% 5% 1%;
+}
+
+.left {
+	display: inline-block;
+	max-width: 50%;
+}
+
+.right {
+	max-width: 50%;
+	float: right;
+}
+
+.centre {
+	/*border: 1px dashed black;*/
+	width: 100%;
+	padding: 0 1% 0 1%;
+}
+
+.middle-img {
+	display: block;
+  background-size: cover;
+}
+
+.secondary-content {
+	/*border: 1px dashed black;*/
+	width: 100%;
+	padding: 5% 1% 5% 1%;
+}
+
+.pagebreak-bottom {
+	border: 1px solid black;
+	width: auto;
+}
+
+.information1 {
+	display: inline-block;
+	max-width: 33%;
+}
+
+.information2 {
+	display: inline-block;
+	max-width: 33%
+}
+
+.information3 {
+	display: inline-block;
+	max-width: 33%
+}
+
+.contact {
+	/*border: 1px dashed black;*/
+	width: 100%;
+	padding: 5% 1% 0 1%;;
+}
+
+.contact a {
+	text-decoration: none;
+	color: black;
+}
+
+footer {
+	/*border: 1px dashed black;*/
+	width: 100%;
+	margin: 1%;
+	text-align: center;
+	padding: 5% 5% 10% 5%;
+}
+
+.services-header-img {
+	width: 100%;
+}
+
+@media only screen and (max-width: 768px) and (min-width: 481px) {
+	.container {
+		max-width: 768px;
+	}
+	.topbar {
+		display: flex;
+	}
+	.navigation {
+		display: flex;
+		margin: 5%;
+	}
+	.navigation a {
+		width: 100%;
+	}
+	.logo {
+		z-index: 10;
+		position: absolute;
+		left: 35%;
+	}
+	.image {
+		display: none;
+	}
+	.middle-img {
+		max-width: 100%;
+		margin: 0;
+
+	}
+	.box {
+		margin: auto;
+	}
+
+}
+
+@media only screen and (max-width: 480px) and (min-width: 320px) {
+	.container {
+		max-width: 400px;
+		display: flex;
+        flex-direction: column;
+	}
+	.navigation {
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+		margin-top: 20%;
+		border-top: 1px solid #444444;
+	}
+	.navigation a {
+		margin: 0;
+		padding: 20px 0;
+		border-bottom: 1px solid #444444;
+		width: 100%;
+		line-height: 10px;
+	}
+	.logo {
+		z-index: 10;
+		position: absolute;
+		left: 25%;
+		top: 2.5%;
+		text-align: center;
+		margin-bottom: 50px;
+	}
+	.bothsections {
+		margin: 75% 0 10% 0;
+	}
+	.heading {
+		width: 100%;
+	}
+	.image {
+		display: none;
+	}
+	.title {
+		text-align: center;
+		width: 100%;
+		margin-top: 50px;
+	}
+	.title p {
+		font-size: 55px;
+	}
+	.box {
+		margin: auto;
+	}
+	.initial-content {
+		display: flex;
+		flex-direction: column;
+		margin-top: 25px;
+	}
+	.secondary-content {
+		display: flex;
+		flex-direction: column;
+	}
+	.left, .right {
+		max-width: 100%;
+	}
+	.left {
+		margin-bottom: 5%;
+	}
+	.information1, .information2, .information3 {
+		max-width: 100%;
+		margin-bottom: 5%;
+	}
+	.centre {
+		margin: 0;
+		max-width: 400px;
+	}
+	.contact {
+		padding-top: 10%;
+	}
+}
