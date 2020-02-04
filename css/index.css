@@ -99,17 +99,17 @@ body {
 }
 
 .logo {
-	float: right;
+    float: right;
+    margin: 1%;
 }
 
 .bothsections {
 	/* border: 2px solid pink; */
 	display: flex;
 	justify-content: space-between;
-	margin: 10% 0 10% 0;
+	margin: 5% 0 5% 0;
 	text-align: center;
-
-
+	padding: 0 1% 0 1%;
 } 
 
 .box {
@@ -118,13 +118,13 @@ body {
 
 .heading {
 	/*border: 1px dashed black;*/
-	width: 45%;
+	width: 100%;
 	/* border: 2px solid red; */
 
 }
 
 .title {
-	width: 50%;
+	width: 100%;
 	/* margin: 10% 10% 0 10%; */
 	text-align: center;
 
@@ -138,13 +138,12 @@ body {
 
 }
 
-.image {
-	/* border: 2px solid blue; */
-}
-
 button {
-	color: gray;
-	margin: 0 0 0 35%;
+    background: #FFFFFF;
+    border: 1px solid gray;
+    height: 30px;
+    width: 125px;
+    margin: 2.5% 0 1.25% 0;
 }
 
 button:hover {
@@ -169,8 +168,7 @@ button:hover {
 .initial-content {
 	/*border: 1px dashed black;*/
 	width: 100%;
-	margin: 1%;
-	padding: 5% 0% 5% 0%;
+	padding: 5% 1% 5% 1%;
 }
 
 .left {
@@ -186,7 +184,7 @@ button:hover {
 .centre {
 	/*border: 1px dashed black;*/
 	width: 100%;
-	margin: 1%;
+	padding: 0 1% 0 1%;
 }
 
 .middle-img {
@@ -197,8 +195,7 @@ button:hover {
 .secondary-content {
 	/*border: 1px dashed black;*/
 	width: 100%;
-	margin: 1%;
-	padding: 5% 0% 5% 0%;
+	padding: 5% 1% 5% 1%;
 }
 
 .pagebreak-bottom {
@@ -224,8 +221,7 @@ button:hover {
 .contact {
 	/*border: 1px dashed black;*/
 	width: 100%;
-	margin: 1%;
-	padding-top: 5%;
+	padding: 5% 1% 0 1%;;
 }
 
 .contact a {
@@ -245,96 +241,111 @@ footer {
 	width: 100%;
 }
 
-/* .layer-one {
-	margin: 5% 20px 0 20px;
-}
+@media only screen and (max-width: 768px) and (min-width: 481px) {
+	.container {
+		max-width: 768px;
+	}
+	.topbar {
+		display: flex;
+	}
+	.navigation {
+		display: flex;
+		margin: 5%;
+	}
+	.navigation a {
+		width: 100%;
+	}
+	.logo {
+		z-index: 10;
+		position: absolute;
+		left: 35%;
+	}
+	.image {
+		display: none;
+	}
+	.middle-img {
+		max-width: 100%;
+		margin: 0;
 
-.opener {
-	margin-bottom: 3%;
-
-}
-
-.opener h1 {
-	font-weight: 500;
-	font-size: 30px;
-}
-
-.opener p {
-	margin-bottom: 5%;
-}
-
-.opening {
-	margin: 5% 18px 3% 18px;
-	border: 1px solid black;
-}
-
-.layer-two {
-	display: flex;
-}
-
-.layer-three {
-	display: flex;
-}
-
-.layer-four {
-	display: flex;
-}
-
-.layer-five {
-	display: flex;
-}
-
-.closer {
-	margin: 3% 18px 3% 18px;
-	border: 1px solid black;
-}
-
-li {
-	list-style: square;
-} */
-
-button {
-    background: #FFFFFF;
-    border: 1px solid gray;
-    border-radius: 5px;
-    height: 30px;
-    width: 125px;
-    margin: 2.5% 0 1.25% 0;
-}
-
-/* .cta {
-	margin-top: 5%;
-}
-
-.cta a {
-	text-decoration: none;
-	color: black;
-}
-
-.box-container {
-	width: 50%;
-	border: 1px solid black;
-	background: #F4F3F4;
-	padding: 20px;
-	margin: 2%;
-}
-
-.closing {
-	width: 50%;
-	margin: 2%;
-	padding: 20px;
-}
-
-.closing p {
-	margin-bottom: 5%;
-}
-
-.closing ul {
-	margin-left: 5%;
-	line-height: 30px;
+	}
+	.box {
+		margin: auto;
+	}
 
 }
 
-.closing img {
-	margin-left: 0;
-} */
+@media only screen and (max-width: 480px) and (min-width: 320px) {
+	.container {
+		max-width: 400px;
+		display: flex;
+        flex-direction: column;
+	}
+	.navigation {
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+		margin-top: 20%;
+		border-top: 1px solid #444444;
+	}
+	.navigation a {
+		margin: 0;
+		padding: 20px 0;
+		border-bottom: 1px solid #444444;
+		width: 100%;
+		line-height: 10px;
+	}
+	.logo {
+		z-index: 10;
+		position: absolute;
+		left: 25%;
+		top: 2.5%;
+		text-align: center;
+		margin-bottom: 50px;
+	}
+	.bothsections {
+		margin: 75% 0 10% 0;
+	}
+	.heading {
+		width: 100%;
+	}
+	.image {
+		display: none;
+	}
+	.title {
+		text-align: center;
+		width: 100%;
+		margin-top: 50px;
+	}
+	.title p {
+		font-size: 55px;
+	}
+	.box {
+		margin: auto;
+	}
+	.initial-content {
+		display: flex;
+		flex-direction: column;
+		margin-top: 25px;
+	}
+	.secondary-content {
+		display: flex;
+		flex-direction: column;
+	}
+	.left, .right {
+		max-width: 100%;
+	}
+	.left {
+		margin-bottom: 5%;
+	}
+	.information1, .information2, .information3 {
+		max-width: 100%;
+		margin-bottom: 5%;
+	}
+	.centre {
+		margin: 0;
+		max-width: 400px;
+	}
+	.contact {
+		padding-top: 10%;
+	}
+}
